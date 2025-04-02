@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>yes24</title>
+    <script defer src="./main.js"></script>
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+
+  <!-- body 시작 -->
+
+  <body>
+    <div class="wrap">
+      <div class="header">
+        <img src="images/mainLogo.png" alt="yes24 메인로고" />
+        <h1>로그인</h1>
+        <button>회원가입</button>
+      </div>
+      <!-- 메인 요소 시작 -->
+      <div class="main">
+        <!-- 회원/비회원 탭메뉴 시작-->
+        <div class="mainLeft">
+          <ul class="memberTab">
+            <li class="member activeTab">
+              <a href="#"><span>회원</span></a>
+            </li>
+            <li class="nonmember">
+              <a href="#"><span>비회원 주문확인</span></a>
+            </li>
+          </ul>
+          <!-- 회원/비회원 탭메뉴 끝-->
+          <!-- '회원' 클릭 했을 때 main 요소의 왼쪽부분 시작-->
+          <div class="memberLoginSection" style="display: block">
+            <form class="loginForm">
+              <input type="text" id="username" placeholder="아이디" />
+
+              <!--미입력시 알림표시-->
+              <p class="pleaseLogin" style="display: none">
+                아이디를 입력해주세요
+              </p>
+
+              <input type="password" id="password" placeholder="비밀번호" />
+              <!--미입력시 알림표시-->
+              <p class="pleasePW" style="display: none">
+                비밀번호를 입력해주세요
+              </p>
+
+              <!-- 로그인 상태 유지/아이디 저장 체크박스 시작 -->
+              <span>
+                <input type="checkbox" id="keepLoggedIn" />
+                <label for="keepLoggedIn">로그인 상태 유지</label>
+                <input type="checkbox" id="rememberId" />
+                <label for="rememberId">아이디 저장</label>
+              </span>
+              <!-- 로그인 상태 유지/아이디 저장 체크박스 끝 -->
+              <!-- 로그인 버튼 시작-->
+              <input type="submit" id="loginSubmit" value="로그인" />
+              <!-- 아이디/비번 찾기 부분 시작 -->
+              <div class="findIDPW">
+                <a href="#">아이디 찾기</a>
+                <span>|</span>
+                <a href="#">비밀번호 찾기</a>
+              </div>
+              <!-- 아이디/비번 찾기 부분 끝 -->
+              <!-- 로그인 버튼 끝-->
+            </form>
+            <!-- 소셜 아이디 로그인 부분 시작 -->
+            <div class="socialLogin">
+              <ul>
+                <li>
+                  <a href="">
+                    <div class="iconWrap">
+                      <img src="./images/naverLogo.png" alt="naverLogin" />
+                    </div>
+                    <span>네이버 아이디로 로그인</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="iconWrap">
+                      <img src="./images/kakaoLogo.png" alt="kakaoLogin" />
+                    </div>
+                    <span>카카오 아이디로 로그인</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="iconWrap">
+                      <img
+                        src="./images/facebookLogo.png"
+                        alt="facebookLogin"
+                      />
+                    </div>
+                    <span>페이스북 아이디로 로그인</span>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="iconWrap">
+                      <img src="./images/mobileLogo.png" alt="mobileLogin" />
+                    </div>
+                    <span>모바일 간편 로그인</span>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <!-- 소셜 아이디 로그인 부분 끝 -->
+          </div>
+          <div class="nonmemberLoginSection" style="display: none">
+            <form class="loginForm">
+              <input type="text" id="username" placeholder="주문번호" />
+
+              <!-- 미입력시 알림 표시 -->
+              <p class="pleaseLogin" style="display: none">
+                주문번호를 입력해주세요
+              </p>
+
+              <input
+                type="password"
+                id="password"
+                placeholder="주문 비밀번호"
+              />
+              <!-- 미입력시 알림 표시 -->
+              <p class="pleasePW" style="display: none">
+                주문 비밀번호를 입력해주세요
+              </p>
+
+              <!-- 로그인 상태 유지/아이디 저장 체크박스 끝 -->
+              <!-- 로그인 버튼 시작-->
+              <input type="submit" id="loginSubmit" value="확인" />
+              <!-- 주문번호/비번 찾기 부분 시작 -->
+              <div class="findIDPW">
+                <a href="#">주문번호 찾기</a>
+                <span>|</span>
+                <a href="#">주문 비밀번호 찾기</a>
+              </div>
+            </form>
+          </div>
+          <!-- '회원' 클릭 했을 때 main 요소의 왼쪽부분 끝-->
+        </div>
+        <div class="mainRight" id="Ad">
+          <a href="https://event.yes24.com/yesBenefit"
+            ><img src="./images/mainAD_top.jpg" alt="상품권+할인 혜택 광고"
+          /></a>
+          <a
+            href="http://adgirl.yes24.com/RealMedia/ads/click_lx.ads/www.yes24.com/Templates/FTLogin.aspx/871936331/Bottom/OasDefault/Login_Bottom/login_youthculture.jpg/64643932613864333637646636646230"
+            ><img src="./images/mainAD_bottom.jpg" alt="청년문화패스 광고"
+          /></a>
+        </div>
+      </div>
+      <!-- 메인 요소 끝 -->
+      <div class="footer">
+        <a href="https://www.yes24.com/notice/FirstClass/newmemCoupon.aspx">
+          <img
+            class="footer_AD"
+            src="./images/footer_AD.gif"
+            alt="회원가입 쿠폰 광고"
+        /></a>
+      </div>
+    </div>
+  </body>
+</html>

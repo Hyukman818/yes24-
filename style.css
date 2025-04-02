@@ -1,0 +1,402 @@
+/* 모든 요소 가운데정렬 */
+html {
+  background-color: #f8f8f8;
+  height: auto;
+  min-height: 100%;
+}
+
+* {
+  margin: 0 auto;
+  font-family: "맑은 고딕", "Malgun Gothic", "Apple SD Gothic Neo", AppleGothic,
+    "돋움", Dotum, "굴림", Gulim, Helvetica, sans-serif;
+  box-sizing: border-box;
+}
+body {
+  height: 100%;
+}
+.wrap {
+  max-width: 1300px;
+  max-height: 2000px;
+  width: 80%;
+  height: auto;
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+.wrap * {
+  margin: 0 auto;
+}
+
+/* 링크들에 밑줄 없앰 */
+a {
+  text-decoration: none;
+}
+
+/* 헤더영역 표시 */
+.header {
+  width: 100%;
+  height: 120px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.header * {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.header h1 {
+  font-size: 1.5rem;
+}
+
+.header button {
+  height: 35%;
+  width: 90px;
+
+  border: 1px solid #ebebeb;
+  border-radius: 3px;
+  background-color: #ffffff;
+  font-style: bold;
+  font-size: 0.8rem;
+  cursor: pointer;
+}
+
+.main {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 5%;
+  padding: 6% 0;
+  background-color: #fff;
+  border: 1px solid #d8d8d8;
+  border-radius: 1px;
+  width: 100%;
+  height: 85%;
+}
+
+.main > * {
+  width: 37%;
+  max-height: 1200px;
+}
+
+.mainLeft {
+  height: 100%;
+  margin: 0;
+  box-sizing: border-box;
+}
+.mainRight {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+}
+
+/* 회원/비회원 선택 탭 */
+.memberLoginSection,
+.nonmemberLoginSection {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  margin-top: 5%;
+  box-sizing: border-box;
+}
+.memberTab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 50px;
+  padding: 0;
+}
+
+.memberTab * {
+  color: black;
+  height: 100%;
+}
+
+.memberTab li {
+  display: flex;
+  align-items: center;
+  width: 50%;
+  height: 100%;
+  min-height: 50px;
+}
+.memberTab {
+  border: 1px solid #d8d8d8;
+}
+.memberTab .member.activeTab {
+  border: 2px solid skyblue;
+}
+
+.memberTab .nonmember.activeTab {
+  border: 2px solid skyblue;
+}
+.memberTab a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+}
+.memberTab span {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  height: 100%;
+}
+
+.loginForm {
+  display: flex;
+  flex-direction: column;
+  margin: 0px 2px;
+  height: auto;
+  gap: 10px;
+  min-height: 270px;
+}
+#username,
+#password {
+  width: calc(100%-10px);
+  height: 10%;
+  min-height: 50px;
+  padding: 0 10px;
+  margin: 0;
+  border: 1px solid #d8d8d8;
+  border-radius: 2px;
+}
+/* 경고 메시지 */
+.pleaseLogin,
+.pleasePW {
+  margin: 0;
+  font-size: 0.8rem;
+  color: red;
+}
+
+.loginForm > span {
+  display: flex;
+  justify-content: left;
+  margin: 0;
+  align-items: center;
+  height: 10%;
+}
+
+.loginForm > span > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3px;
+}
+
+/* 로그인 상태 유지 / 아이디 저장 체크박스 */
+.loginForm > span > input {
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+}
+
+#loginSubmit {
+  width: 100%;
+  border: 1px solid #0080ff;
+  border-radius: 5px;
+  background-color: #0080ff;
+  color: #ffffff;
+  font-size: 1.2rem;
+  min-height: 60px;
+  cursor: pointer;
+}
+
+.findIDPW {
+  float: left;
+  padding: 3px;
+  margin: 0;
+}
+.findIDPW * {
+  color: black;
+  margin: 0 auto;
+}
+
+/* sns로 로그인 */
+.socialLogin {
+  width: 100%;
+  height: auto;
+  min-height: 250px;
+  box-sizing: border-box;
+}
+.socialLogin ul {
+  width: 100%;
+  height: 240px;
+  padding: 0;
+  list-style: none;
+}
+.socialLogin li {
+  width: 100%;
+  height: 25%;
+  padding: 3px 0;
+  margin: 10px 0;
+}
+.socialLogin a {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  color: black;
+  border: 1px solid rgba(55, 55, 55, 0.1);
+}
+.socialLogin a .iconWrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  position: relative;
+  margin: 0 6px;
+}
+.socialLogin a .iconWrap img {
+  max-width: 35px;
+  min-width: 30px;
+  width: 90%;
+  margin: 0;
+  padding: 0;
+}
+.socialLogin a .iconWrap::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -6px; /* padding 끝나는 곳 */
+  width: 1px;
+  height: 100%;
+  background-color: rgba(55, 55, 55, 0.1);
+}
+.socialLogin a span {
+  display: flex;
+  width: 85%;
+
+  justify-content: center;
+}
+
+/* 우측 광고 메뉴 */
+.mainRight * {
+  width: 100%;
+}
+.mainRight > a {
+  max-width: 500px;
+}
+
+.mainRight img:nth-of-type(1) {
+  margin-top: 10px;
+}
+
+.footer {
+  width: 100%;
+  height: 10%;
+}
+.footer * {
+  width: 100%;
+}
+
+@media screen and (max-width: 1600px) {
+  .header img {
+    width: 145px;
+  }
+  .header h1 {
+    font-size: 1.8rem;
+  }
+}
+@media screen and (max-width: 1250px) {
+  .memberTab {
+    height: 6%;
+  }
+}
+@media screen and (max-width: 1130px) {
+  .wrap {
+    display: flex;
+    flex-direction: column;
+  }
+  .mainLeft {
+    width: 38%;
+  }
+  .mainRight {
+    width: 38%;
+  }
+}
+@media screen and (max-width: 960px) {
+  .wrap {
+    max-height: 2100px;
+  }
+  .main {
+    height: 70%;
+    min-height: 1050px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 1500px;
+    gap: 0;
+  }
+  .mainLeft {
+    height: 70%;
+    width: 90%;
+  }
+  .mainLeft > .memberTab {
+    height: 75px;
+  }
+  .mainLeft > .memberTab * {
+    font-size: 24px;
+  }
+  .mainLeft .loginForm {
+    height: 50%;
+    gap: 15px;
+  }
+  .mainLeft #username,
+  .mainLeft #password {
+    height: 25%;
+    font-size: 18px;
+    padding: 20px;
+  }
+  .mainLeft #loginSubmit {
+    min-height: 80px;
+  }
+
+  .socialLogin {
+    min-height: 280px;
+  }
+  .socialLogin li {
+    min-height: 25%;
+  }
+
+  .mainRight {
+    height: 30%;
+    width: 90%;
+    flex-direction: row;
+    padding: 5% 0;
+    gap: 10px;
+  }
+  .mainRight > a {
+    width: 50%;
+  }
+  .footer {
+    display: flex;
+    height: 50px;
+  }
+  .footer img {
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .socialLogin span {
+    font-size: 14px;
+  }
+}
+
+@media screen and (max-width: 765px) {
+  .mainRight {
+    display: flex;
+    flex-direction: column;
+  }
+  .mainRight a {
+    width: 90%;
+  }
+}
